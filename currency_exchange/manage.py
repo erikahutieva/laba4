@@ -20,3 +20,11 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+
+# Invoke-WebRequest -Uri http://127.0.0.1:8000/auth/register/ -Method POST -Headers @{ "Content-Type" = "application/json" } -Body '{"username": "testuser", "password": "testpassword"}'
+#Invoke-WebRequest -Uri http://127.0.0.1:8000/auth/login/ -Method POST -Headers @{ "Content-Type" = "application/json" } -Body '{"username": "testuser", "password": "testpassword"}'
+#Invoke-WebRequest -Uri http://127.0.0.1:8000/currency/api-token-auth/ -Method POST -Body '{"username": "testuser", "password": "testpassword"}' -ContentType "application/json"
+#{"token":"7eb405fdae5edf2136dda5cb873ce644052b678b"}
+#Invoke-WebRequest -Uri http://127.0.0.1:8000/currency/list/ -Method GET -Headers @{"Authorization" = "Token 7eb405fdae5edf2136dda5cb873ce644052b678b"}

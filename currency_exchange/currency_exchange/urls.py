@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('users.urls')),      # Маршруты для аутентификации
     path('currency/', include('currency.urls'))  # Маршруты для работы с валютами
+    
 ]
 
