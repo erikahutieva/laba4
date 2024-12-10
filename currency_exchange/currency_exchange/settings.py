@@ -20,22 +20,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-3=19tm6b8h!g_7-22*sb&^3b)p4&%i=jsid81zk=y2$q($udxm'
+SECRET_KEY = 'django-insecure--y%6^tbyv=raitsqd4knv+&vm+z_e1d($911zqzgmt5%zf2*3o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
-# settings.py
-from dotenv import load_dotenv
-import os
 
-load_dotenv()
-
-SECRET_KEY = os.getenv("SECRET_KEY", "fallback_secret_key")
-EXCHANGE_API_KEY = os.getenv("EXCHANGE_API_KEY", "")
-
-AUTH_USER_MODEL = 'api.User'
 
 # Application definition
 
@@ -46,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'users',
+    'currency',
 ]
 
 MIDDLEWARE = [
