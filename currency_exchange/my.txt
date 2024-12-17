@@ -1,0 +1,11 @@
+$headers = @{
+    "Content-Type" = "application/json"
+}
+
+$body = @{
+    username = "testuser"
+    password = "testpass"
+} | ConvertTo-Json
+
+Invoke-RestMethod -Uri "http://127.0.0.1:8000/auth/register/" -Method Post -Body $body -Headers $headers
+
